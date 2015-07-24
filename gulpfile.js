@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
+		autoprefixer = require('gulp-autoprefixer'),
 		clean = require('gulp-clean'),
 		concat = require('gulp-concat'),
+		cssCacheBust = require('gulp-css-cache-bust'),
 		gutil = require('gulp-util'),
 		imagemin = require('gulp-imagemin'),
 		jshint = require('gulp-jshint'),
@@ -35,6 +37,11 @@ gulp.task('clean', function() {
 
 gulp.task('build-css', function() {
 	return gulp.src(files.input.css)
+		.pipe(cssCacheBust())
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(gulp.dest(files.output.css));
 });
 

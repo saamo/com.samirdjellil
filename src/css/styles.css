@@ -1,0 +1,47 @@
+html {
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #fff;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	height: 100vh;
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+h1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 2rem;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	font-weight: 100;
+}
+
+@media (min-width: 460px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 1336px) {
+  h1 {
+    font-size: 120px;
+  }
+}
